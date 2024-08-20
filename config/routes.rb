@@ -11,4 +11,30 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # verb '/path', to: 'controller_name#action', as: :prefix
+
+  # See all restaurants
+  get '/restaurants', to: 'restaurants#index', as: :restaurants
+
+  # Display the new form
+  get '/restaurants/new', to: 'restaurants#new', as: :new_restaurant
+
+  # Receive the form submission
+  post '/restaurants', to: 'restaurants#create'
+
+  # See one restaurant
+  get '/restaurants/:id', to: 'restaurants#show', as: :restaurant
+
+  # Display the EDIT form
+  get '/restaurants/:id/edit', to: 'restaurants#edit', as: :edit_restaurant
+
+  # Receive the EDIT form submission
+  patch '/restaurants/:id', to: 'restaurants#update'
+
+  # Delete one restaurant
+  delete '/restaurants/:id', to: 'restaurants#destroy'
+
+
+
 end
