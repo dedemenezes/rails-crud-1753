@@ -1,24 +1,28 @@
-# README
+## Rails CRUD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### User stories
 
-Things you may want to cover:
+- As an user I can see all restaurants
+- As an user I can see on restaurant
+...
 
-* Ruby version
 
-* System dependencies
+#### Data Brick
 
-* Configuration
+- Generate model
+  - rails generate model ModelName column_name:column_type
+  - ex: rails generate model FootballTeam name:string year:integer
 
-* Database creation
+- Check migration and assign defaults
+- Run migrations
+- Test crash your models (rails console)
 
-* Database initialization
+#### App Brick
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+1. Route
+2. Controller action
+3. View
+4. Test crash your user story (visit the page, submit the form....)
 
-* Deployment instructions
-
-* ...
+##### ALWAYS work on ONE USER STORY at a time.

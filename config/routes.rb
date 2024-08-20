@@ -9,10 +9,13 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
-  # Defines the root path route ("/")
-  # root "posts#index"
 
+  # !!!! ROUTES SYNTAX !!!!
   # verb '/path', to: 'controller_name#action', as: :prefix
+
+  # my routes wil compare the path from the browser in here
+  # IN ORDER
+  # /restaurants/new is a match against <route>? ⤵️
 
   # See all restaurants
   get '/restaurants', to: 'restaurants#index', as: :restaurants

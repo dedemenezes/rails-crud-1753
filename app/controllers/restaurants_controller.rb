@@ -64,8 +64,9 @@ class RestaurantsController < ApplicationController
   end
 
   # STRONG PARAMETERS
-  # to permit the fileds from the form
   def restaurant_params
+    # require the params key referencing the form
+    # permit the form fields WE added
     params.require(:restaurant).permit(:name, :address, :rating)
   end
 end
